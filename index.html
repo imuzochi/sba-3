@@ -8,11 +8,23 @@
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+      <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            raleway: ['Raleway', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
 <body class="bg-[hsl(229,57%,11%)] min-h-screen">
     <!-- Background -->
-    <main class="relative min-h-screen overflow-hidden flex items-center justify-center">
+    <main class="relative min-h-screen overflow-hidden flex items-center justify-center font-raleway">
         <!-- Bottom background image -->
         <div class="absolute bottom-0 left-0 w-full h-[50%] z-0">
             <img src="images/bg-desktop.png" alt="background image" class="w-full h-full object-cover">
@@ -43,15 +55,39 @@
                        </div>
                    </div>
                </div>
-
-
+              <!-- STORAGE CARD -->
+              <div class="relative w-full md:flex-1 bg-[hsl(228,56%,26%)] rounded-lg px-10 pt-10 pb-9 md:mb-0">
+                <!-- Text -->
+                <p class="text-sm text-[hsl(229,7%,55%)] mb-4">
+                  You've used
+                  <span class="text-white font-bold">815 GB</span>
+                  of your storage
+                </p>
+                  <!-- Progress bar -->
+                  <div class="w-full h-5 bg-[#151e4d] rounded-full p-[3px]">
+                    <div class="relative h-full w-[81.5%] rounded-full bg-gradient-to-r from-[#ffa399] to-[#ff4d9a]">
+                      <!-- White circle -->
+                       <div class="absolute right-[2px] top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full"></div>
+                    </div>
+                  </div>
+                  <!-- Progress labels -->
+                  <div class="flex justify-between text-xs font-bold text-[#d0d5ea] mt-2">
+                      <span>0 GB</span>
+                      <span>1000 GB</span>
+                  </div>
+                  <!-- 185 GB bubble -->
+                  <div class="absolute right-10 -top-12 bg-white rounded-lg px-6 py-4 text-[#0c122c]">
+                    <div class="flex items-baseline gap-2">
+                      <span class="text-4xl font-bold">185</span>
+                      <span class="text-xs font-bold text-gray-500 tracking-wide">GB LEFT</span>
+                    </div>
+                      <!-- Triangle -->
+                    <div
+                      class="absolute right-0 -bottom-5 w-0 h-0 border-t-[24px] border-t-white border-l-[24px] border-l-transparent"></div>
+                  </div>
+              </div>
            </div>
-
-
        </div>
-
-
     </main>
-
 </body>
 </html>
