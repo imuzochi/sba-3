@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Fylo data storage component</title>
+    <title>Fylo Storage</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
-  You’ve used 815 GB of your storage
+<body class="bg-[hsl(229,57%,11%)] min-h-screen">
+    <!-- Background -->
+    <main class="relative min-h-screen overflow-hidden flex items-center justify-center">
+        <!-- Bottom background image -->
+        <div class="absolute bottom-0 left-0 w-full h-[50%] z-0">
+            <img src="images/bg-desktop.png" alt="background image" class="w-full h-full object-cover">
+        </div>
 
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
+    </main>
+
 </body>
 </html>
